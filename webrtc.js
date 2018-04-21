@@ -15,15 +15,18 @@ canvas.width = 480;
 canvas.height = 360;
 
 var button = document.querySelector('button');
-button.onclick = function() {
+// button.onclick =
+setInterval(function() {
+
   canvas.width = video.videoWidth;
   canvas.height = video.videoHeight;
   canvas.getContext('2d').
     drawImage(video, 0, 0, canvas.width, canvas.height);
 
   var data = canvas.toDataURL('image/png');
+  console.log(data);
   uploadFile(data);
-};
+},1000);
 
 var constraints = {
   audio: false,

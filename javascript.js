@@ -33,7 +33,6 @@ function drop(e) {
 
   var dt = e.dataTransfer;
   var files = dt.files;
-
   handleFiles(files);
 }
 

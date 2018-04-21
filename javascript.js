@@ -44,6 +44,7 @@ function uploadFile(file) {
   var fd = new FormData();
   xhr.open('POST', url, true);
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+  console.log(url);
 
   // Reset the upload progress bar
    document.getElementById('progress').style.width = 0;
@@ -70,6 +71,17 @@ function uploadFile(file) {
       img.src = tokens.join('/');
       img.alt = response.public_id;
       document.getElementById('gallery').appendChild(img);
+
+      var imageName = `${img.alt}.jpg`
+      console.log(imageName);
+
+      document.getElementById('croppedImage').append(
+        `
+
+          https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_face/${imageName}
+
+        `
+      );
     }
   };
 
@@ -82,6 +94,12 @@ function uploadFile(file) {
 // *********** Handle selected files ******************** //
 var handleFiles = function(files) {
   for (var i = 0; i < files.length; i++) {
+    // cloudinary.imageTag(files[i],{width: 100, height: 100, gravity: "faces", crop: "thumb"}).toHtml();
     uploadFile(files[i]); // call the function to upload the file
   }
 };
+
+
+
+
+// cloudinary.imageTag('couple.jpg', {width: 100, height: 100, gravity: "faces", crop: "thumb"}).toHtml();

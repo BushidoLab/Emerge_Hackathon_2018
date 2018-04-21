@@ -82,14 +82,14 @@ function uploadFile(file) {
       );
       // document.getElementById('croppedImage').append($.cloudinary.url(imageName, {width: 300, height: 100, crop: "scale"}))
 
-      var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_face/${imageName}`
+      var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_faces/${imageName}`
       // document.getElementById('croppedImage').append(tagToAppend).toHtml();
 
 
       $('#croppedImage').prepend($('<img>',{id:'theImg',src:tagToAppend}));
       var faceList = [];
       faceList = response.faces;
-      // console.log(faceList[0]);
+      console.log(faceList);
       // console.log(faceList[1]);
       // console.log(faceList[2]);
       // console.log(faceList[3]);
@@ -114,7 +114,6 @@ $('#cropButton').click(function(){
   let file = document.getElementById('theImg');
   console.log(file.src);
   // handleFiles(file);
-})
-
+});
 
 // cloudinary.imageTag('couple.jpg', {width: 100, height: 100, gravity: "faces", crop: "thumb"}).toHtml();

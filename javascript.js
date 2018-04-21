@@ -80,9 +80,11 @@ function uploadFile(file) {
       // $('#croppedImage').prepend($('<img>',{id:'theImg',src:tagToAppend}));
       var faceList = [];
       faceList = response.faces;
+
       console.log(faceList[0]);
 
       var fl = faceList.length;
+      console.log(fl);
       for(i = 0; i < fl ; i++){
         var xx = faceList[i][0];
         var yy = faceList[i][1];

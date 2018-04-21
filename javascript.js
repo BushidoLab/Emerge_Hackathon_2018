@@ -77,7 +77,7 @@ function uploadFile(file) {
 
       document.getElementById('croppedImage').append(
         `
-          https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_face/${imageName}
+          https://res.cloudinary.com/dxjyu9wev/image/upload/l_golden_star,g_faces,w_1.0,fl_region_relative/${imageName}
         `
       );
       // document.getElementById('croppedImage').append($.cloudinary.url(imageName, {width: 300, height: 100, crop: "scale"}))

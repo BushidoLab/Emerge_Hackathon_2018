@@ -82,7 +82,7 @@ function uploadFile(file) {
       );
       // document.getElementById('croppedImage').append($.cloudinary.url(imageName, {width: 300, height: 100, crop: "scale"}))
 
-      var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_faces/${imageName}`
+      var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/g_faces/${imageName}`
       // document.getElementById('croppedImage').append(tagToAppend).toHtml();
 
 
@@ -101,7 +101,6 @@ function uploadFile(file) {
         document.getElementById('firstFace').append(
           `
             https://res.cloudinary.com/dxjyu9wev/image/upload/x_${xx},y_${yy},w_${ww},h_${hh},c_crop/${imageName}
-
           `
         )
       }

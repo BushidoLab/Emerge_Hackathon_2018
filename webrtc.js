@@ -20,6 +20,9 @@ button.onclick = function() {
   canvas.height = video.videoHeight;
   canvas.getContext('2d').
     drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  var data = canvas.toDataURL('image/png');
+  uploadFile(data);
 };
 
 var constraints = {
@@ -30,6 +33,7 @@ var constraints = {
 function handleSuccess(stream) {
   window.stream = stream; // make stream available to browser console
   video.srcObject = stream;
+
 }
 
 function handleError(error) {

@@ -77,11 +77,13 @@ function uploadFile(file) {
 
       document.getElementById('croppedImage').append(
         `
-
           https://res.cloudinary.com/dxjyu9wev/image/upload/w_100,h_100,c_thumb,g_face/${imageName}
-
         `
       );
+      // document.getElementById('croppedImage').append($.cloudinary.url(imageName, {width: 300, height: 100, crop: "scale"}))
+
+
+      console.log(response);
     }
   };
 

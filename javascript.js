@@ -75,18 +75,9 @@ function uploadFile(file) {
       var imageName = `${img.alt}.jpg`
       console.log(imageName);
 
-      document.getElementById('croppedImage').append(
-        `
-          https://res.cloudinary.com/dxjyu9wev/image/upload/l_golden_star,g_faces,w_1.0,fl_region_relative/${imageName}
-        `
-      );
-      // document.getElementById('croppedImage').append($.cloudinary.url(imageName, {width: 300, height: 100, crop: "scale"}))
+      // var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/g_faces/${imageName}`;
 
-      var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/g_faces/${imageName}`
-      // document.getElementById('croppedImage').append(tagToAppend).toHtml();
-
-
-      $('#croppedImage').prepend($('<img>',{id:'theImg',src:tagToAppend}));
+      // $('#croppedImage').prepend($('<img>',{id:'theImg',src:tagToAppend}));
       var faceList = [];
       faceList = response.faces;
       console.log(faceList[0]);
@@ -98,11 +89,13 @@ function uploadFile(file) {
         var ww = faceList[i][2];
         var hh = faceList[i][3];
 
-        document.getElementById('firstFace').append(
-          `
-            https://res.cloudinary.com/dxjyu9wev/image/upload/x_${xx},y_${yy},w_${ww},h_${hh},c_crop/${imageName}
-          `
-        )
+        // document.getElementById('firstFace').append(
+        //   `
+        var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/x_${xx},y_${yy},w_${ww},h_${hh},c_crop/${imageName}`
+        //   `
+        // )
+        $('#faces').prepend($('<img>',{id:'theImg',src:tagToAppend}));
+
       }
 
       // console.log(faceList[1]);

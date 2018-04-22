@@ -25,10 +25,8 @@ const x = fs.readFileSync('img.txt').toString();
 
         console.log(response);
 
-        return response
+        return response;
     });
-
-
     console.log(detected);
 })();
 

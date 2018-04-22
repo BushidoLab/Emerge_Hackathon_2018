@@ -12,6 +12,8 @@
     "good-console": "^7.1.0",
     "good-squeeze": "^5.0.2",
     "hapi": "^17.3.1",
+    "http-server": "^0.11.1",
+    "raspicam": "^0.2.14",
     "uniqid": "^4.1.1"
   },
   "devDependencies": {

@@ -1,0 +1,42 @@
+RECOGNIZE SUCCESSFULL {
+    "images": [{
+        "faces": [{
+            "attributes": {
+                "age": 25,
+                "asian": 0.00075,
+                "black": 0.00089,
+                "gender": {
+                    "femaleConfidence": 0.99997,
+                    "maleConfidence": 0.00003,
+                    "type": "F"
+                },
+                "glasses": "None",
+                "hispanic": 0.02626,
+                "lips": "Together",
+                "other": 0.00595,
+                "white": 0.96614
+            },
+            "chinTipX": 1183,
+            "chinTipY": 1039,
+            "confidence": 0.99938,
+            "eyeDistance": 457,
+            "face_id": 1,
+            "height": 966,
+            "leftEyeCenterX": 1630,
+            "leftEyeCenterY": 341,
+            "pitch": -21,
+            "quality": 1.50676,
+            "rightEyeCenterX": 1191,
+            "rightEyeCenterY": 215,
+            "roll": 17,
+            "topLeftX": 892,
+            "topLeftY": 75,
+            "width": 966,
+            "yaw": 2
+        }],
+        "file": "pexels-photo-63456.jpeg",
+        "height": 1500,
+        "status": "Complete",
+        "width": 2208
+    }]
+}

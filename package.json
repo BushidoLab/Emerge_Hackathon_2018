@@ -4,11 +4,25 @@
   "description": "",
   "main": "javascript.js",
   "dependencies": {
+    "axios": "^0.18.0",
+    "blipp": "^3.0.0",
+    "cloudinary-jquery-file-upload": "^2.5.0",
+    "dotenv": "^5.0.1",
+    "dynamoose": "^0.8.7",
+    "good": "^8.1.1",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.0.2",
+    "hapi": "^17.3.1",
+    "kue": "^0.11.6",
+    "uniqid": "^4.1.1"
+  },
+  "devDependencies": {
     "cloudinary-jquery-file-upload": "^2.5.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js",
+    "server": "nodemon -e js --watch lib --watch index.js --watch server.js --exec 'npm start'",
+    "nuke": "rm -rf node_modules/; rm package-lock.json; npm cache clean --force;"
   },
   "repository": {
     "type": "git",

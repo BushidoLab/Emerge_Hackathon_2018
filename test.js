@@ -20,6 +20,7 @@ const x = fs.readFileSync('img.txt').toString();
     const faceURLs = mapFaces(response);
 
     console.log(faceURLs.map(async (image) => {
+
         console.log(image);
         return await callKairos(Object.assign({}, payload, { image }));
     }));

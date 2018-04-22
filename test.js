@@ -19,14 +19,13 @@ const x = fs.readFileSync('img.txt').toString();
     const response = await uploadService(x);
     const faceURLs = mapFaces(response);
 
-    const detected = await faceURLs.map(async (image) => {
-        console.log(image);
+    const detected = faceURLs.map(async (image) => {
+
         const response = await callKairos(Object.assign({}, payload, { image }));
-
         console.log(response);
-
         return response;
     });
-    console.log(detected);
+
+
 })();
 

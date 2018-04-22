@@ -1,5 +1,5 @@
 const cloudName = 'dxjyu9wev';
-const unsignedUploadPreset = 'clyg3ajp';
+const unsignedUploadPreset = 'bushidolab';
 
 var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
@@ -92,7 +92,7 @@ function uploadFile(file) {
 
         // document.getElementById('firstFace').append(
         //   `
-        var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/x_${xx},y_${yy},w_${ww},h_${hh},c_crop/${imageName}`
+        var tagToAppend = `https://res.cloudinary.com/dxjyu9wev/image/upload/x_${xx},y_${yy},w_${ww},h_${hh},c_crop/w_200,r_max,h_200/${imageName}`
         //   `
         // )
         $('#faces').prepend($('<img>',{id:'theImg',src:tagToAppend}));
